@@ -1,0 +1,69 @@
+GET http://localhost:5050/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MzE0Y2YyMDc4M2RmNTQzODI0ZGUzMiIsImZpcnN0TmFtZSI6Ik1hdHRlbyIsImxhc3ROYW1lIjoiR2lnaSIsImVtYWlsIjoiZmFiaW9AZ2lnaS5jb20iLCJpYXQiOjE2OTc3Mjk4MDYsImV4cCI6MTY5NzgxNjIwNn0.F9ZGfq5gVye6ZH8mmO1MPWX2hM6P765oWyeI57RTSg8
+
+###
+POST http://localhost:5050/posts/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "settimo post",
+    "category": "Horror",
+    "cover": "https://thumbs.dreamstime.com/z/icona-dell-utente-di-vettore-7337510.jpg?w=768",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    "rate": "1",
+    "author": "65227398f0c455ca31d870bc"
+}
+
+###
+PATCH http://localhost:5050/posts/update/651efac8ebfddb390349aa8c HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "terzo modificato",
+    "price": "25",
+    "author":"Matteo"
+}
+
+
+###
+DELETE http://localhost:5050/posts/delete/6526bfee7d46fb27dc0ad7df
+
+###
+GET http://localhost:5050/posts?page=3&pageSize=3
+
+
+/* chiamate utenti */
+
+###
+GET  http://localhost:5050/users
+
+###
+POST http://localhost:5050/users/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Matteo",
+    "lastName": "Gigi",
+    "email": "fabio@gigi.com",
+    "password": "abcdefghilm"
+}
+
+###
+PATCH http://localhost:5050/users/update/6522778046d24060bad04ce0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Fabio",
+}
+
+###
+DELETE http://localhost:5050/users/delete/6522778046d24060bad04ce0 HTTP/1.1
+
+###
+POST http://localhost:5050/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "fabio@gigi.com",
+    "password": "abcdefghilm"
+}
