@@ -12,7 +12,7 @@ module.exports = function (req, res, next) {
     }
 
     try {
-        const verified = jwt.verify(token, process.env.JWT_SECRET) //decodifica il token per accedere alle infromazioni(token, firma digitale nostra)
+        const verified = jwt.verify(token, process.env.JWT_SECRET) //verifica il token per accedere alle infromazioni(token, firma digitale nostra)
         req.user = verified
 
         next() //prosegue

@@ -11,7 +11,7 @@ Content-Type: application/json
     "cover": "https://thumbs.dreamstime.com/z/icona-dell-utente-di-vettore-7337510.jpg?w=768",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     "rate": "1",
-    "author": "65227398f0c455ca31d870bc"
+    "author": "653686e7e9ad502a7c542ca5"
 }
 
 ###
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:5050/posts/delete/6526bfee7d46fb27dc0ad7df
+DELETE http://localhost:5050/posts/delete/65369036e9ad502a7c542d41
 
 ###
 GET http://localhost:5050/posts?page=3&pageSize=3
@@ -42,10 +42,10 @@ POST http://localhost:5050/users/create HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Matteo",
-    "lastName": "Gigi",
-    "email": "fabio@gigi.com",
-    "password": "abcdefghilm"
+    "firstName": "Fabio",
+    "lastName": "Borrelli",
+    "email": "fabioBorrelli@gmail.com",
+    "password": "qwerty"
 }
 
 ###

@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const postRoute = require('./routes/posts')
 const userRoute = require('./routes/user')
 const loginRoutes = require('./routes/login')
+const githubRoutes = require('./routes/github')
+//const verifyRoutes = require('./routes/verify')
 const cors = require('cors')
 const path = require('path') //si usa per fare upload file, gia presente no install
 const PORT = 5050;
@@ -16,6 +18,8 @@ app.use(express.json()) /* obbligatorio se no non legge */
 app.use('/', postRoute)
 app.use('/', userRoute)
 app.use('/', loginRoutes)
+app.use('/', githubRoutes)
+//app.use('/', verifyRoutes)
 
 
 mongoose.connect('mongodb+srv://fabioborrelli64:ZrpCB9XPzknYoYpa@gigicluster0.cfcyqqm.mongodb.net/', {
